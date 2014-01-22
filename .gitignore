@@ -1,0 +1,7 @@
+PGdevTests
+Pods
+Podfile
+Podfile.lock
+.DS_Store
+PGdev.xcodeproj/xcuserdata/
+
