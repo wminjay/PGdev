@@ -26,6 +26,22 @@
 		A8990E77188FC00E000AE25D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8990E76188FC00E000AE25D /* Main.storyboard */; };
 		A8990E7B188FC0BE000AE25D /* LYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8990E7A188FC0BE000AE25D /* LYMainViewController.m */; };
 		A8990E7E188FC316000AE25D /* LYTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8990E7D188FC316000AE25D /* LYTestViewController.m */; };
+		A89BE70E189629760015EC6E /* UDIDWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A89BE70D189629760015EC6E /* UDIDWrapper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A8A93D8B189D2F7C007689ED /* MKMapView+AIFExtraMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93D7D189D2F7C007689ED /* MKMapView+AIFExtraMethod.m */; };
+		A8A93D8C189D2F7C007689ED /* NSDate+AIFExtraMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93D7F189D2F7C007689ED /* NSDate+AIFExtraMethod.m */; };
+		A8A93D8D189D2F7C007689ED /* UIColor+AIFHexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93D81189D2F7C007689ED /* UIColor+AIFHexColor.m */; };
+		A8A93D8E189D2F7C007689ED /* UIImage+AIFExtraMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93D83189D2F7C007689ED /* UIImage+AIFExtraMethod.m */; };
+		A8A93D8F189D2F7C007689ED /* UIView+AIFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93D85189D2F7C007689ED /* UIView+AIFFrame.m */; };
+		A8A93D90189D2F7C007689ED /* AIFFilePathUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93D88189D2F7C007689ED /* AIFFilePathUtil.m */; };
+		A8A93D91189D2F7C007689ED /* AIFNetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93D8A189D2F7C007689ED /* AIFNetworkUtil.m */; };
+		A8A93D99189D33A8007689ED /* NSMutableArray+AIFExtraMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93D98189D33A8007689ED /* NSMutableArray+AIFExtraMethod.m */; };
+		A8A93D9C189D363D007689ED /* NSNumber+AIFExtraMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93D9B189D363D007689ED /* NSNumber+AIFExtraMethod.m */; };
+		A8A93D9F189D4E7E007689ED /* NSArray+AIFExtraMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93D9E189D4E7E007689ED /* NSArray+AIFExtraMethod.m */; };
+		A8A93DA2189D509A007689ED /* NSDictionary+AIFExtraMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93DA1189D509A007689ED /* NSDictionary+AIFExtraMethod.m */; };
+		A8A93DA5189D5115007689ED /* NSString+AIFExtraMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93DA4189D5115007689ED /* NSString+AIFExtraMethod.m */; };
+		A8A93DAC189D579A007689ED /* UIView+AIFExtraMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93DAB189D579A007689ED /* UIView+AIFExtraMethod.m */; };
+		A8A93DB3189D5F11007689ED /* AIFLocationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A93DB2189D5F11007689ED /* AIFLocationUtil.m */; };
+		A8D389581890AE6300767F50 /* LYAutoLayoutMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D389571890AE6300767F50 /* LYAutoLayoutMainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +80,38 @@
 		A8990E7A188FC0BE000AE25D /* LYMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMainViewController.m; sourceTree = "<group>"; };
 		A8990E7C188FC316000AE25D /* LYTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTestViewController.h; sourceTree = "<group>"; };
 		A8990E7D188FC316000AE25D /* LYTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTestViewController.m; sourceTree = "<group>"; };
+		A89BE70C189629760015EC6E /* UDIDWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDIDWrapper.h; sourceTree = "<group>"; };
+		A89BE70D189629760015EC6E /* UDIDWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDIDWrapper.m; sourceTree = "<group>"; };
+		A8A93D7C189D2F7C007689ED /* MKMapView+AIFExtraMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+AIFExtraMethod.h"; sourceTree = "<group>"; };
+		A8A93D7D189D2F7C007689ED /* MKMapView+AIFExtraMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+AIFExtraMethod.m"; sourceTree = "<group>"; };
+		A8A93D7E189D2F7C007689ED /* NSDate+AIFExtraMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+AIFExtraMethod.h"; sourceTree = "<group>"; };
+		A8A93D7F189D2F7C007689ED /* NSDate+AIFExtraMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+AIFExtraMethod.m"; sourceTree = "<group>"; };
+		A8A93D80189D2F7C007689ED /* UIColor+AIFHexColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AIFHexColor.h"; sourceTree = "<group>"; };
+		A8A93D81189D2F7C007689ED /* UIColor+AIFHexColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AIFHexColor.m"; sourceTree = "<group>"; };
+		A8A93D82189D2F7C007689ED /* UIImage+AIFExtraMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AIFExtraMethod.h"; sourceTree = "<group>"; };
+		A8A93D83189D2F7C007689ED /* UIImage+AIFExtraMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AIFExtraMethod.m"; sourceTree = "<group>"; };
+		A8A93D84189D2F7C007689ED /* UIView+AIFFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AIFFrame.h"; sourceTree = "<group>"; };
+		A8A93D85189D2F7C007689ED /* UIView+AIFFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AIFFrame.m"; sourceTree = "<group>"; };
+		A8A93D87189D2F7C007689ED /* AIFFilePathUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIFFilePathUtil.h; sourceTree = "<group>"; };
+		A8A93D88189D2F7C007689ED /* AIFFilePathUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIFFilePathUtil.m; sourceTree = "<group>"; };
+		A8A93D89189D2F7C007689ED /* AIFNetworkUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIFNetworkUtil.h; sourceTree = "<group>"; };
+		A8A93D8A189D2F7C007689ED /* AIFNetworkUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIFNetworkUtil.m; sourceTree = "<group>"; };
+		A8A93D97189D33A8007689ED /* NSMutableArray+AIFExtraMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+AIFExtraMethod.h"; sourceTree = "<group>"; };
+		A8A93D98189D33A8007689ED /* NSMutableArray+AIFExtraMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+AIFExtraMethod.m"; sourceTree = "<group>"; };
+		A8A93D9A189D363D007689ED /* NSNumber+AIFExtraMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+AIFExtraMethod.h"; sourceTree = "<group>"; };
+		A8A93D9B189D363D007689ED /* NSNumber+AIFExtraMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+AIFExtraMethod.m"; sourceTree = "<group>"; };
+		A8A93D9D189D4E7E007689ED /* NSArray+AIFExtraMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+AIFExtraMethod.h"; sourceTree = "<group>"; };
+		A8A93D9E189D4E7E007689ED /* NSArray+AIFExtraMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+AIFExtraMethod.m"; sourceTree = "<group>"; };
+		A8A93DA0189D509A007689ED /* NSDictionary+AIFExtraMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+AIFExtraMethod.h"; sourceTree = "<group>"; };
+		A8A93DA1189D509A007689ED /* NSDictionary+AIFExtraMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+AIFExtraMethod.m"; sourceTree = "<group>"; };
+		A8A93DA3189D5115007689ED /* NSString+AIFExtraMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AIFExtraMethod.h"; sourceTree = "<group>"; };
+		A8A93DA4189D5115007689ED /* NSString+AIFExtraMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AIFExtraMethod.m"; sourceTree = "<group>"; };
+		A8A93DAA189D579A007689ED /* UIView+AIFExtraMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AIFExtraMethod.h"; sourceTree = "<group>"; };
+		A8A93DAB189D579A007689ED /* UIView+AIFExtraMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AIFExtraMethod.m"; sourceTree = "<group>"; };
+		A8A93DB1189D5F11007689ED /* AIFLocationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIFLocationUtil.h; sourceTree = "<group>"; };
+		A8A93DB2189D5F11007689ED /* AIFLocationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIFLocationUtil.m; sourceTree = "<group>"; };
+		A8D389561890AE6300767F50 /* LYAutoLayoutMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAutoLayoutMainViewController.h; sourceTree = "<group>"; };
+		A8D389571890AE6300767F50 /* LYAutoLayoutMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAutoLayoutMainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +177,8 @@
 		A834FECF188FA95E00D4DFAE /* PGdev */ = {
 			isa = PBXGroup;
 			children = (
+				A8A93D7A189D2F7C007689ED /* AIF */,
+				A89BE70A1896293F0015EC6E /* Common */,
 				A8990E78188FC09B000AE25D /* Controllers */,
 				A834FED8188FA95E00D4DFAE /* LYAppDelegate.h */,
 				A834FED9188FA95E00D4DFAE /* LYAppDelegate.m */,
@@ -180,12 +230,90 @@
 		A8990E78188FC09B000AE25D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A8D389551890AE3900767F50 /* AutoLayoutDemo */,
 				A8990E79188FC0BE000AE25D /* LYMainViewController.h */,
 				A8990E7A188FC0BE000AE25D /* LYMainViewController.m */,
 				A8990E7C188FC316000AE25D /* LYTestViewController.h */,
 				A8990E7D188FC316000AE25D /* LYTestViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A89BE70A1896293F0015EC6E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A89BE70B1896293F0015EC6E /* Util */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A89BE70B1896293F0015EC6E /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A89BE70C189629760015EC6E /* UDIDWrapper.h */,
+				A89BE70D189629760015EC6E /* UDIDWrapper.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		A8A93D7A189D2F7C007689ED /* AIF */ = {
+			isa = PBXGroup;
+			children = (
+				A8A93D7B189D2F7C007689ED /* Category */,
+				A8A93D86189D2F7C007689ED /* Util */,
+			);
+			path = AIF;
+			sourceTree = "<group>";
+		};
+		A8A93D7B189D2F7C007689ED /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A8A93D7C189D2F7C007689ED /* MKMapView+AIFExtraMethod.h */,
+				A8A93D7D189D2F7C007689ED /* MKMapView+AIFExtraMethod.m */,
+				A8A93D7E189D2F7C007689ED /* NSDate+AIFExtraMethod.h */,
+				A8A93D7F189D2F7C007689ED /* NSDate+AIFExtraMethod.m */,
+				A8A93D80189D2F7C007689ED /* UIColor+AIFHexColor.h */,
+				A8A93D81189D2F7C007689ED /* UIColor+AIFHexColor.m */,
+				A8A93D82189D2F7C007689ED /* UIImage+AIFExtraMethod.h */,
+				A8A93D83189D2F7C007689ED /* UIImage+AIFExtraMethod.m */,
+				A8A93D84189D2F7C007689ED /* UIView+AIFFrame.h */,
+				A8A93D85189D2F7C007689ED /* UIView+AIFFrame.m */,
+				A8A93D97189D33A8007689ED /* NSMutableArray+AIFExtraMethod.h */,
+				A8A93D98189D33A8007689ED /* NSMutableArray+AIFExtraMethod.m */,
+				A8A93D9A189D363D007689ED /* NSNumber+AIFExtraMethod.h */,
+				A8A93D9B189D363D007689ED /* NSNumber+AIFExtraMethod.m */,
+				A8A93D9D189D4E7E007689ED /* NSArray+AIFExtraMethod.h */,
+				A8A93D9E189D4E7E007689ED /* NSArray+AIFExtraMethod.m */,
+				A8A93DA0189D509A007689ED /* NSDictionary+AIFExtraMethod.h */,
+				A8A93DA1189D509A007689ED /* NSDictionary+AIFExtraMethod.m */,
+				A8A93DA3189D5115007689ED /* NSString+AIFExtraMethod.h */,
+				A8A93DA4189D5115007689ED /* NSString+AIFExtraMethod.m */,
+				A8A93DAA189D579A007689ED /* UIView+AIFExtraMethod.h */,
+				A8A93DAB189D579A007689ED /* UIView+AIFExtraMethod.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		A8A93D86189D2F7C007689ED /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A8A93D87189D2F7C007689ED /* AIFFilePathUtil.h */,
+				A8A93D88189D2F7C007689ED /* AIFFilePathUtil.m */,
+				A8A93D89189D2F7C007689ED /* AIFNetworkUtil.h */,
+				A8A93D8A189D2F7C007689ED /* AIFNetworkUtil.m */,
+				A8A93DB1189D5F11007689ED /* AIFLocationUtil.h */,
+				A8A93DB2189D5F11007689ED /* AIFLocationUtil.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		A8D389551890AE3900767F50 /* AutoLayoutDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A8D389561890AE6300767F50 /* LYAutoLayoutMainViewController.h */,
+				A8D389571890AE6300767F50 /* LYAutoLayoutMainViewController.m */,
+			);
+			name = AutoLayoutDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +364,7 @@
 			attributes = {
 				CLASSPREFIX = LY;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = Gin;
+				ORGANIZATIONNAME = "Anjuke Inc";
 				TargetAttributes = {
 					A834FEE3188FA95E00D4DFAE = {
 						TestTargetID = A834FEC3188FA95E00D4DFAE;
@@ -320,11 +448,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8A93D90189D2F7C007689ED /* AIFFilePathUtil.m in Sources */,
+				A8A93D9F189D4E7E007689ED /* NSArray+AIFExtraMethod.m in Sources */,
+				A8A93D99189D33A8007689ED /* NSMutableArray+AIFExtraMethod.m in Sources */,
+				A8A93D8E189D2F7C007689ED /* UIImage+AIFExtraMethod.m in Sources */,
 				A8990E7E188FC316000AE25D /* LYTestViewController.m in Sources */,
+				A89BE70E189629760015EC6E /* UDIDWrapper.m in Sources */,
 				A834FEDD188FA95E00D4DFAE /* PGdev.xcdatamodeld in Sources */,
+				A8D389581890AE6300767F50 /* LYAutoLayoutMainViewController.m in Sources */,
+				A8A93DA5189D5115007689ED /* NSString+AIFExtraMethod.m in Sources */,
 				A834FED6188FA95E00D4DFAE /* main.m in Sources */,
+				A8A93D91189D2F7C007689ED /* AIFNetworkUtil.m in Sources */,
+				A8A93DB3189D5F11007689ED /* AIFLocationUtil.m in Sources */,
+				A8A93DAC189D579A007689ED /* UIView+AIFExtraMethod.m in Sources */,
 				A8990E7B188FC0BE000AE25D /* LYMainViewController.m in Sources */,
+				A8A93D8F189D2F7C007689ED /* UIView+AIFFrame.m in Sources */,
+				A8A93D8D189D2F7C007689ED /* UIColor+AIFHexColor.m in Sources */,
+				A8A93D8B189D2F7C007689ED /* MKMapView+AIFExtraMethod.m in Sources */,
+				A8A93D8C189D2F7C007689ED /* NSDate+AIFExtraMethod.m in Sources */,
+				A8A93D9C189D363D007689ED /* NSNumber+AIFExtraMethod.m in Sources */,
 				A834FEDA188FA95E00D4DFAE /* LYAppDelegate.m in Sources */,
+				A8A93DA2189D509A007689ED /* NSDictionary+AIFExtraMethod.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74B6C351679F41ECBE573948 /* Pods.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -457,6 +602,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74B6C351679F41ECBE573948 /* Pods.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

@@ -47,11 +47,31 @@
                     <navigationItem key="navigationItem" id="9Ze-ai-2J4"/>
                     <connections>
                         <outlet property="tableView" destination="Fqq-9V-7pz" id="Gid-kc-V5D"/>
+                        <segue destination="YWT-BF-9pt" kind="push" id="Fyd-IR-N9E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ch3-TZ-jvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="203" y="140"/>
+        </scene>
+        <!--Auto Layout Main View Controller-->
+        <scene sceneID="JMA-up-0mL">
+            <objects>
+                <viewController storyboardIdentifier="autoLayout" id="YWT-BF-9pt" customClass="LYAutoLayoutMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lCV-Jw-XwU"/>
+                        <viewControllerLayoutGuide type="bottom" id="tuN-Sc-Wnz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lvY-u7-6Fa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M4L-Cd-n1D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1he-cR-0qy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621" y="140"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

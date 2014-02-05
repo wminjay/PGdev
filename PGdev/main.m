@@ -14,7 +14,9 @@
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
+        
         [UI7Kit patchIfNeeded];
+        
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([LYAppDelegate class]));
     }
 }
