@@ -7,8 +7,9 @@
 //
 
 #import "LYAutoLayoutMainViewController.h"
+#import "ASIHTTPRequest.h"
 
-@interface LYAutoLayoutMainViewController ()
+@interface LYAutoLayoutMainViewController () <ASIProgressDelegate>
 
 @end
 
@@ -34,9 +35,43 @@
 #pragma mark - Private Methods
 - (void)configView
 {
+    NSURL *url = [NSURL URLWithString:@"http://127.0.0.1"];
     
+    ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    [request setDelegate:self];
+    [request setDidReceiveDataSelector:@selector(didReceiveData:)];
+    // persistent connections Demo
+    [request setDataReceivedBlock:^(NSData *data) {
+        DLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    }];
+    [request startAsynchronous];
 }
 
 #pragma mark - Public Methods
+
+- (void)didReceiveData:(ASIHTTPRequest *)request
+{
+    DLog(@"%@", request.requestHeaders);
+
+    DLog(@"%@", request.responseString);
+    
+    
+//    NSLog([[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+}
+
+- (void)request:(ASIHTTPRequest *)request didReceiveData:(NSData *)data
+{
+    
+}
+
+- (void)request:(ASIHTTPRequest *)request didReceiveBytes:(long long)bytes
+{
+    
+}
+
+- (void)request:(ASIHTTPRequest *)request incrementDownloadSizeBy:(long long)newLength
+{
+    
+}
 
 @end
