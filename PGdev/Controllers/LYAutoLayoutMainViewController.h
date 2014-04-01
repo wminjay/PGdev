@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSMessageTextView.h"
+#import "NSString+JSMessagesView.h"
+#import "JSMessageInputView.h"
 
 @interface LYAutoLayoutMainViewController : UIViewController
 
