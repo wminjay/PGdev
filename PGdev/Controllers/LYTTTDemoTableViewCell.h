@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TTTAttributedLabel.h"
+#import "AXTTTAttributedLabel.h"
 
 @interface LYTTTDemoTableViewCell : UITableViewCell
 
-- (void)configWithTTTLabel:(TTTAttributedLabel *)lable;
+- (void)configWithTTTLabel:(AXTTTAttributedLabel *)lable;
 
 @end

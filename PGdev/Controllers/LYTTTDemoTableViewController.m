@@ -7,7 +7,7 @@
 //
 
 #import "LYTTTDemoTableViewController.h"
-#import "TTTAttributedLabel.h"
+#import "AXTTTAttributedLabel.h"
 #import "LYTTTDemoTableViewCell.h"
 
 @interface LYTTTDemoTableViewController ()
@@ -60,15 +60,15 @@
 //    [self.dataList addObject:@"sdjaskdjaskdjaskd[tx]a[tx]b[tx]c[tx]d[tx][tx][tx][tx][tx][tx][tx][tx][tx][tx][tx][tx][tx][tx]ja dakas jdas[tx]k adjaks jdask"];
 
     [self.dataList enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        TTTAttributedLabel *label = nil;
-        label = [[TTTAttributedLabel alloc] init];
+        AXTTTAttributedLabel *label = nil;
+        label = [[AXTTTAttributedLabel alloc] init];
         label.numberOfLines = 0;
         NSArray *array = @[@{@"name":@"tx", @"width":@"18", @"ascent":@"16", @"descent":@"2", @"image":@"Expression_21.png"},@{@"name":@"ty", @"width":@"18", @"ascent":@"16", @"descent":@"2", @"image":@"Expression_56.png"},@{@"name":@"tz", @"width":@"18", @"ascent":@"16", @"descent":@"2", @"image":@"Expression_57.png"}];
         label.imageBricks = array;
         label.font = [UIFont systemFontOfSize:18.0];
         label.text = obj;
         label.lineBreakMode = kCTLineBreakByWordWrapping;
-        CGSize size = [TTTAttributedLabel sizeThatFitsAttributedString:label.attributedText
+        CGSize size = [AXTTTAttributedLabel sizeThatFitsAttributedString:label.attributedText
                                                        withConstraints:CGSizeMake(194.0, 10000.0)
                                                 limitedToNumberOfLines:0];
 
@@ -98,7 +98,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGSize size = [TTTAttributedLabel sizeThatFitsAttributedString:((TTTAttributedLabel *)self.labelList[indexPath.row]).attributedText
+    CGSize size = [AXTTTAttributedLabel sizeThatFitsAttributedString:((AXTTTAttributedLabel *)self.labelList[indexPath.row]).attributedText
                                                    withConstraints:CGSizeMake(194.0, 10000.0)
                                             limitedToNumberOfLines:0];
 

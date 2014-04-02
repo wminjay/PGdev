@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "TTTAttributedLabel.h"
+#import "AXTTTAttributedLabel.h"
 
 #import <QuartzCore/QuartzCore.h>
 #import <Availability.h>
@@ -162,7 +162,7 @@ static inline CGFLOAT_TYPE CGFloat_round(CGFLOAT_TYPE cgfloat) {
 }
 
 
-static inline NSDictionary * NSAttributedStringAttributesFromLabel(TTTAttributedLabel *label) {
+static inline NSDictionary * NSAttributedStringAttributesFromLabel(AXTTTAttributedLabel *label) {
     NSMutableDictionary *mutableAttributes = [NSMutableDictionary dictionary];
     
     if ([NSMutableParagraphStyle class]) {
@@ -313,7 +313,7 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
     return CGSizeMake(CGFloat_ceil(suggestedSize.width), CGFloat_ceil(suggestedSize.height));
 }
 
-@interface TTTAttributedLabel ()
+@interface AXTTTAttributedLabel ()
 @property (readwrite, nonatomic, copy) NSAttributedString *inactiveAttributedText;
 @property (readwrite, nonatomic, copy) NSAttributedString *renderedAttributedText;
 @property (readwrite, nonatomic, strong) NSDataDetector *dataDetector;
@@ -321,7 +321,7 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
 @property (readwrite, nonatomic, strong) NSTextCheckingResult *activeLink;
 @end
 
-@implementation TTTAttributedLabel {
+@implementation AXTTTAttributedLabel {
 @private
     BOOL _needsFramesetter;
     CTFramesetterRef _framesetter;
@@ -1083,10 +1083,10 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
     for (int i = [chunks count] - 1; i >= 0; --i) {
         NSTextCheckingResult *chunk = [chunks objectAtIndex:i];
         NSString *result = [text substringWithRange:[chunk range]];
-        DLog(@"result:%@", result);
+//        DLog(@"result:%@", result);
         if ([result hasPrefix:@"["] && [result hasSuffix:@"]"] && ([result length] > 2)) {
             NSString *name = [result substringWithRange:NSMakeRange(1, [result length]-2)];
-            DLog(@"name:%@", name);
+//            DLog(@"name:%@", name);
             NSDictionary *brick = [self imageBrickForName:name];
             if (brick) {
                 CTRunDelegateCallbacks callbacks;

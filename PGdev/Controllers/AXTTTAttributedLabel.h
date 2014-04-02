@@ -62,10 +62,10 @@ extern NSString * const kTTTBackgroundLineWidthAttributeName;
  */
 extern NSString * const kTTTBackgroundCornerRadiusAttributeName;
 
-@protocol TTTAttributedLabelDelegate;
+@protocol AXTTTAttributedLabelDelegate;
 
 // Override UILabel @property to accept both NSString and NSAttributedString
-@protocol TTTAttributedLabel <NSObject>
+@protocol AXTTTAttributedLabel <NSObject>
 @property (nonatomic, copy) id text;
 @end
 
@@ -90,7 +90,7 @@ extern NSString * const kTTTBackgroundCornerRadiusAttributeName;
  
  @bug Setting `attributedText` directly is not recommended, as it may cause a crash when attempting to access any links previously set. Instead, call `setText:`, passing an `NSAttributedString`.
  */
-@interface TTTAttributedLabel : UILabel <TTTAttributedLabel, UIGestureRecognizerDelegate>
+@interface AXTTTAttributedLabel : UILabel <AXTTTAttributedLabel, UIGestureRecognizerDelegate>
 
 ///-----------------------------
 /// @name Accessing the Delegate
@@ -101,7 +101,7 @@ extern NSString * const kTTTBackgroundCornerRadiusAttributeName;
  
  @discussion A `TTTAttributedLabel` delegate responds to messages sent by tapping on links in the label. You can use the delegate to respond to links referencing a URL, address, phone number, date, or date with a specified time zone and duration.
  */
-@property (nonatomic, unsafe_unretained) IBOutlet id <TTTAttributedLabelDelegate> delegate;
+@property (nonatomic, unsafe_unretained) IBOutlet id <AXTTTAttributedLabelDelegate> delegate;
 
 ///--------------------------------------------
 /// @name Detecting, Accessing, & Styling Links
@@ -379,7 +379,7 @@ afterInheritingLabelAttributesAndConfiguringWithBlock:(NSMutableAttributedString
 /**
  The `TTTAttributedLabelDelegate` protocol defines the messages sent to an attributed label delegate when links are tapped. All of the methods of this protocol are optional.
  */
-@protocol TTTAttributedLabelDelegate <NSObject>
+@protocol AXTTTAttributedLabelDelegate <NSObject>
 
 ///-----------------------------------
 /// @name Responding to Link Selection
@@ -392,7 +392,7 @@ afterInheritingLabelAttributesAndConfiguringWithBlock:(NSMutableAttributedString
  @param label The label whose link was selected.
  @param url The URL for the selected link.
  */
-- (void)attributedLabel:(TTTAttributedLabel *)label
+- (void)attributedLabel:(AXTTTAttributedLabel *)label
    didSelectLinkWithURL:(NSURL *)url;
 
 /**
@@ -401,7 +401,7 @@ afterInheritingLabelAttributesAndConfiguringWithBlock:(NSMutableAttributedString
  @param label The label whose link was selected.
  @param addressComponents The components of the address for the selected link.
  */
-- (void)attributedLabel:(TTTAttributedLabel *)label
+- (void)attributedLabel:(AXTTTAttributedLabel *)label
 didSelectLinkWithAddress:(NSDictionary *)addressComponents;
 
 /**
@@ -410,7 +410,7 @@ didSelectLinkWithAddress:(NSDictionary *)addressComponents;
  @param label The label whose link was selected.
  @param phoneNumber The phone number for the selected link.
  */
-- (void)attributedLabel:(TTTAttributedLabel *)label
+- (void)attributedLabel:(AXTTTAttributedLabel *)label
 didSelectLinkWithPhoneNumber:(NSString *)phoneNumber;
 
 /**
@@ -419,7 +419,7 @@ didSelectLinkWithPhoneNumber:(NSString *)phoneNumber;
  @param label The label whose link was selected.
  @param date The datefor the selected link.
  */
-- (void)attributedLabel:(TTTAttributedLabel *)label
+- (void)attributedLabel:(AXTTTAttributedLabel *)label
   didSelectLinkWithDate:(NSDate *)date;
 
 /**
@@ -430,7 +430,7 @@ didSelectLinkWithPhoneNumber:(NSString *)phoneNumber;
  @param timeZone The time zone of the date for the selected link.
  @param duration The duration, in seconds from the date for the selected link.
  */
-- (void)attributedLabel:(TTTAttributedLabel *)label
+- (void)attributedLabel:(AXTTTAttributedLabel *)label
   didSelectLinkWithDate:(NSDate *)date
                timeZone:(NSTimeZone *)timeZone
                duration:(NSTimeInterval)duration;
@@ -441,7 +441,7 @@ didSelectLinkWithPhoneNumber:(NSString *)phoneNumber;
  @param label The label whose link was selected.
  @param components A dictionary containing the transit components. The currently supported keys are `NSTextCheckingAirlineKey` and `NSTextCheckingFlightKey`.
  */
-- (void)attributedLabel:(TTTAttributedLabel *)label
+- (void)attributedLabel:(AXTTTAttributedLabel *)label
 didSelectLinkWithTransitInformation:(NSDictionary *)components;
 
 /**
@@ -452,7 +452,7 @@ didSelectLinkWithTransitInformation:(NSDictionary *)components;
  @param label The label whose link was selected.
  @param result The custom text checking result.
  */
-- (void)attributedLabel:(TTTAttributedLabel *)label
+- (void)attributedLabel:(AXTTTAttributedLabel *)label
 didSelectLinkWithTextCheckingResult:(NSTextCheckingResult *)result;
 
 @end

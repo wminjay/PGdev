@@ -18,7 +18,7 @@
 		A81632E818EA943A0061F8BE /* LYTTTDemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81632E718EA943A0061F8BE /* LYTTTDemoTableViewController.m */; };
 		A81632EB18EA9F780061F8BE /* LYTTTDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A81632EA18EA9F780061F8BE /* LYTTTDemoTableViewCell.m */; };
 		A81632F118EAA52F0061F8BE /* Expression_21@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A81632F018EAA52F0061F8BE /* Expression_21@2x.png */; };
-		A81632F418EAA75A0061F8BE /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A81632F318EAA75A0061F8BE /* TTTAttributedLabel.m */; };
+		A81632F418EAA75A0061F8BE /* AXTTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A81632F318EAA75A0061F8BE /* AXTTTAttributedLabel.m */; };
 		A834FEC8188FA95E00D4DFAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A834FEC7188FA95E00D4DFAE /* Foundation.framework */; };
 		A834FECA188FA95E00D4DFAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A834FEC9188FA95E00D4DFAE /* CoreGraphics.framework */; };
 		A834FECC188FA95E00D4DFAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A834FECB188FA95E00D4DFAE /* UIKit.framework */; };
@@ -88,8 +88,8 @@
 		A81632E918EA9F780061F8BE /* LYTTTDemoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTTTDemoTableViewCell.h; sourceTree = "<group>"; };
 		A81632EA18EA9F780061F8BE /* LYTTTDemoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTTTDemoTableViewCell.m; sourceTree = "<group>"; };
 		A81632F018EAA52F0061F8BE /* Expression_21@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Expression_21@2x.png"; sourceTree = "<group>"; };
-		A81632F218EAA75A0061F8BE /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
-		A81632F318EAA75A0061F8BE /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		A81632F218EAA75A0061F8BE /* AXTTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXTTTAttributedLabel.h; sourceTree = "<group>"; };
+		A81632F318EAA75A0061F8BE /* AXTTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXTTTAttributedLabel.m; sourceTree = "<group>"; };
 		A834FEC4188FA95E00D4DFAE /* PGdev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PGdev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A834FEC7188FA95E00D4DFAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A834FEC9188FA95E00D4DFAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -199,8 +199,8 @@
 		A81632E518EA941F0061F8BE /* TTTDemo */ = {
 			isa = PBXGroup;
 			children = (
-				A81632F218EAA75A0061F8BE /* TTTAttributedLabel.h */,
-				A81632F318EAA75A0061F8BE /* TTTAttributedLabel.m */,
+				A81632F218EAA75A0061F8BE /* AXTTTAttributedLabel.h */,
+				A81632F318EAA75A0061F8BE /* AXTTTAttributedLabel.m */,
 				A81632E618EA943A0061F8BE /* LYTTTDemoTableViewController.h */,
 				A81632E718EA943A0061F8BE /* LYTTTDemoTableViewController.m */,
 				A81632E918EA9F780061F8BE /* LYTTTDemoTableViewCell.h */,
@@ -558,7 +558,7 @@
 				A81632EB18EA9F780061F8BE /* LYTTTDemoTableViewCell.m in Sources */,
 				A81632E818EA943A0061F8BE /* LYTTTDemoTableViewController.m in Sources */,
 				A846600F18C258760001D2F9 /* LYTestCell.m in Sources */,
-				A81632F418EAA75A0061F8BE /* TTTAttributedLabel.m in Sources */,
+				A81632F418EAA75A0061F8BE /* AXTTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

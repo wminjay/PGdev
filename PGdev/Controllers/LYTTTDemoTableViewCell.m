@@ -29,7 +29,7 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)configWithTTTLabel:(TTTAttributedLabel *)lable
+- (void)configWithTTTLabel:(AXTTTAttributedLabel *)lable
 {
     if ([self viewWithTag:99]) {
         [[self viewWithTag:99] removeFromSuperview];
