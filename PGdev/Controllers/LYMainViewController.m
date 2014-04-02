@@ -11,7 +11,7 @@
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <CoreTelephony/CTCarrier.h>
 #import "LYTestCell.h"
-#import "NimbusAttributedLabel.h"
+#import "LYTTTDemoTableViewController.h"
 
 @interface LYMainViewController ()
 
@@ -93,7 +93,7 @@
     
     
     
-    [self.dataList addObject:@"b"];
+    [self.dataList addObject:@"TTTDemo"];
     [self.dataList addObject:@"c"];
     [self.dataList addObject:@"c"];
     [self.dataList addObject:@"c"];
@@ -154,7 +154,6 @@
 #pragma mark - Private Methods
 - (void)test
 {
-    
     NSString *macAddress = [[NSUserDefaults standardUserDefaults] objectForKey:@"macAddress"];
     DLog(@"macAddress:%@", macAddress);
     
@@ -204,50 +203,8 @@ static CGPoint  delayOffset = {0.0};
         }
         case 1:
         {
-            NSMutableArray *insertIndexPaths = [NSMutableArray arrayWithCapacity:10];
-            NSIndexPath *newPath =  [NSIndexPath indexPathForRow:0 inSection:0];
-            NSIndexPath *newPath1 =  [NSIndexPath indexPathForRow:1 inSection:0];
-            NSIndexPath *newPath2 =  [NSIndexPath indexPathForRow:2 inSection:0];
-            NSIndexPath *newPath3 =  [NSIndexPath indexPathForRow:3 inSection:0];
-
-            [insertIndexPaths addObject:newPath];
-            [insertIndexPaths addObject:newPath1];
-            [insertIndexPaths addObject:newPath2];
-            [insertIndexPaths addObject:newPath3];
-
-
-//            [self.tableView reloadRowsAtIndexPaths:insertIndexPaths withRowAnimation:UITableViewRowAnimationNone];
-            
-            [self.dataList insertObject:@"x" atIndex:0];
-            [self.dataList insertObject:@"y" atIndex:0];
-            [self.dataList insertObject:@"z" atIndex:0];
-            [self.dataList insertObject:@"m" atIndex:0];
-            
-            
-//            [self.tableView beginUpdates];
-//            [self.tableView insertRowsAtIndexPaths:insertIndexPaths withRowAnimation:UITableViewRowAnimationNone];
-//            [self.tableView endUpdates];
-
-            [self.tableView reloadData];
-            CGFloat testH =  [self tableView:[self tableView] heightForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]] * 4;
-            CGPoint offset = [[self tableView] contentOffset];
-
-            offset.y = testH;
-//            if (offset.y > [[self tableView] contentSize].height) {
-//                offset.y = 0;
-//            }
-            offset.y -= 50;
-            DLog(@"offset.y:%f", offset.y);
-            [[self tableView] setContentOffset:offset animated:NO];
-//            [self.tableView scrollToNearestSelectedRowAtScrollPosition:UITableViewScrollPositionBottom animated:YES];
-//            UIEdgeInsets insets = UIEdgeInsetsZero;
-//            insets.top =  -testH + 250;
-//            insets.bottom = 500;
-//            self.tableView.contentInset = insets;
-//            self.tableView.scrollIndicatorInsets = insets;
-
-            
-            
+            LYTTTDemoTableViewController *tttDemoViewController = [[LYTTTDemoTableViewController alloc] init];
+            [self.navigationController pushViewController:tttDemoViewController animated:YES];
             break;
         }
         case 2:
@@ -271,7 +228,6 @@ static CGPoint  delayOffset = {0.0};
 {
     LYTestCell *cell = [[LYTestCell alloc] init];
     cell.textLabel.text = [NSString stringWithFormat:@"indexPath.row:%d，%@", indexPath.row, self.dataList[indexPath.row]];
-//    DLog(@"%d", indexPath.row);
     return cell;
     switch (indexPath.row) {
         case 0:
