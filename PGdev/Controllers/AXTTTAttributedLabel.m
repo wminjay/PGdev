@@ -27,47 +27,47 @@
 
 #define kTTTLineBreakWordWrapTextWidthScalingFactor (M_PI / M_E)
 
-static CGFloat const TTTFLOAT_MAX = 100000;
+static CGFloat const AXTTTFLOAT_MAX = 100000;
 
-NSString * const kTTTStrikeOutAttributeName = @"TTTStrikeOutAttribute";
-NSString * const kTTTBackgroundFillColorAttributeName = @"TTTBackgroundFillColor";
-NSString * const kTTTBackgroundFillPaddingAttributeName = @"TTTBackgroundFillPadding";
-NSString * const kTTTBackgroundStrokeColorAttributeName = @"TTTBackgroundStrokeColor";
-NSString * const kTTTBackgroundLineWidthAttributeName = @"TTTBackgroundLineWidth";
-NSString * const kTTTBackgroundCornerRadiusAttributeName = @"TTTBackgroundCornerRadius";
+NSString * const kAXTTTStrikeOutAttributeName = @"TTTStrikeOutAttribute";
+NSString * const kAXTTTBackgroundFillColorAttributeName = @"TTTBackgroundFillColor";
+NSString * const kAXTTTBackgroundFillPaddingAttributeName = @"TTTBackgroundFillPadding";
+NSString * const kAXTTTBackgroundStrokeColorAttributeName = @"TTTBackgroundStrokeColor";
+NSString * const kAXTTTBackgroundLineWidthAttributeName = @"TTTBackgroundLineWidth";
+NSString * const kAXTTTBackgroundCornerRadiusAttributeName = @"TTTBackgroundCornerRadius";
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 60000
-const NSTextAlignment TTTTextAlignmentLeft = NSTextAlignmentLeft;
-const NSTextAlignment TTTTextAlignmentCenter = NSTextAlignmentCenter;
-const NSTextAlignment TTTTextAlignmentRight = NSTextAlignmentRight;
-const NSTextAlignment TTTTextAlignmentJustified = NSTextAlignmentJustified;
-const NSTextAlignment TTTTextAlignmentNatural = NSTextAlignmentNatural;
+const NSTextAlignment AXTTTTextAlignmentLeft = NSTextAlignmentLeft;
+const NSTextAlignment AXTTTTextAlignmentCenter = NSTextAlignmentCenter;
+const NSTextAlignment AXTTTTextAlignmentRight = NSTextAlignmentRight;
+const NSTextAlignment AXTTTTextAlignmentJustified = NSTextAlignmentJustified;
+const NSTextAlignment AXTTTTextAlignmentNatural = NSTextAlignmentNatural;
 
-const NSLineBreakMode TTTLineBreakByWordWrapping = NSLineBreakByWordWrapping;
-const NSLineBreakMode TTTLineBreakByCharWrapping = NSLineBreakByCharWrapping;
-const NSLineBreakMode TTTLineBreakByClipping = NSLineBreakByClipping;
-const NSLineBreakMode TTTLineBreakByTruncatingHead = NSLineBreakByTruncatingHead;
-const NSLineBreakMode TTTLineBreakByTruncatingMiddle = NSLineBreakByTruncatingMiddle;
-const NSLineBreakMode TTTLineBreakByTruncatingTail = NSLineBreakByTruncatingTail;
+const NSLineBreakMode AXTTTLineBreakByWordWrapping = NSLineBreakByWordWrapping;
+const NSLineBreakMode AXTTTLineBreakByCharWrapping = NSLineBreakByCharWrapping;
+const NSLineBreakMode AXTTTLineBreakByClipping = NSLineBreakByClipping;
+const NSLineBreakMode AXTTTLineBreakByTruncatingHead = NSLineBreakByTruncatingHead;
+const NSLineBreakMode AXTTTLineBreakByTruncatingMiddle = NSLineBreakByTruncatingMiddle;
+const NSLineBreakMode AXTTTLineBreakByTruncatingTail = NSLineBreakByTruncatingTail;
 
-typedef NSTextAlignment TTTTextAlignment;
-typedef NSLineBreakMode TTTLineBreakMode;
+typedef NSTextAlignment AXTTTTextAlignment;
+typedef NSLineBreakMode AXTTTLineBreakMode;
 #else
-const UITextAlignment TTTTextAlignmentLeft = NSTextAlignmentLeft;
-const UITextAlignment TTTTextAlignmentCenter = NSTextAlignmentCenter;
-const UITextAlignment TTTTextAlignmentRight = NSTextAlignmentRight;
-const UITextAlignment TTTTextAlignmentJustified = NSTextAlignmentJustified;
-const UITextAlignment TTTTextAlignmentNatural = NSTextAlignmentNatural;
+const UITextAlignment AXTTTTextAlignmentLeft = NSTextAlignmentLeft;
+const UITextAlignment AXTTTTextAlignmentCenter = NSTextAlignmentCenter;
+const UITextAlignment AXTTTTextAlignmentRight = NSTextAlignmentRight;
+const UITextAlignment AXTTTTextAlignmentJustified = NSTextAlignmentJustified;
+const UITextAlignment AXTTTTextAlignmentNatural = NSTextAlignmentNatural;
 
-const UITextAlignment TTTLineBreakByWordWrapping = NSLineBreakByWordWrapping;
-const UITextAlignment TTTLineBreakByCharWrapping = NSLineBreakByCharWrapping;
-const UITextAlignment TTTLineBreakByClipping = NSLineBreakByClipping;
-const UITextAlignment TTTLineBreakByTruncatingHead = NSLineBreakByTruncatingHead;
-const UITextAlignment TTTLineBreakByTruncatingMiddle = NSLineBreakByTruncatingMiddle;
-const UITextAlignment TTTLineBreakByTruncatingTail = NSLineBreakByTruncatingTail;
+const UITextAlignment AXTTTLineBreakByWordWrapping = NSLineBreakByWordWrapping;
+const UITextAlignment AXTTTLineBreakByCharWrapping = NSLineBreakByCharWrapping;
+const UITextAlignment AXTTTLineBreakByClipping = NSLineBreakByClipping;
+const UITextAlignment AXTTTLineBreakByTruncatingHead = NSLineBreakByTruncatingHead;
+const UITextAlignment AXTTTLineBreakByTruncatingMiddle = NSLineBreakByTruncatingMiddle;
+const UITextAlignment AXTTTLineBreakByTruncatingTail = NSLineBreakByTruncatingTail;
 
-typedef UITextAlignment TTTTextAlignment;
-typedef UILineBreakMode TTTLineBreakMode;
+typedef UITextAlignment AXTTTTextAlignment;
+typedef UILineBreakMode AXTTTLineBreakMode;
 #endif
 
 
@@ -86,7 +86,7 @@ static CGFloat widthCallback( void *ref ){
 }
 
 
-static inline CTTextAlignment CTTextAlignmentFromTTTTextAlignment(TTTTextAlignment alignment) {
+static inline CTTextAlignment CTTextAlignmentFromTTTTextAlignment(AXTTTTextAlignment alignment) {
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 60000
     switch (alignment) {
 		case NSTextAlignmentLeft: return kCTLeftTextAlignment;
@@ -104,7 +104,7 @@ static inline CTTextAlignment CTTextAlignmentFromTTTTextAlignment(TTTTextAlignme
 #endif
 }
 
-static inline CTLineBreakMode CTLineBreakModeFromTTTLineBreakMode(TTTLineBreakMode lineBreakMode) {
+static inline CTLineBreakMode CTLineBreakModeFromTTTLineBreakMode(AXTTTLineBreakMode lineBreakMode) {
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 60000
 	switch (lineBreakMode) {
 		case NSLineBreakByWordWrapping: return kCTLineBreakByWordWrapping;
@@ -284,15 +284,15 @@ static inline NSAttributedString * NSAttributedStringBySettingColorFromContext(N
 
 static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstraints(CTFramesetterRef framesetter, NSAttributedString *attributedString, CGSize size, NSUInteger numberOfLines) {
     CFRange rangeToSize = CFRangeMake(0, (CFIndex)[attributedString length]);
-    CGSize constraints = CGSizeMake(size.width, TTTFLOAT_MAX);
+    CGSize constraints = CGSizeMake(size.width, AXTTTFLOAT_MAX);
     
     if (numberOfLines == 1) {
         // If there is one line, the size that fits is the full width of the line
-        constraints = CGSizeMake(TTTFLOAT_MAX, TTTFLOAT_MAX);
+        constraints = CGSizeMake(AXTTTFLOAT_MAX, AXTTTFLOAT_MAX);
     } else if (numberOfLines > 0) {
         // If the line count of the label more than 1, limit the range to size to the number of lines that have been set
         CGMutablePathRef path = CGPathCreateMutable();
-        CGPathAddRect(path, NULL, CGRectMake(0.0f, 0.0f, constraints.width, TTTFLOAT_MAX));
+        CGPathAddRect(path, NULL, CGRectMake(0.0f, 0.0f, constraints.width, AXTTTFLOAT_MAX));
         CTFrameRef frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, NULL);
         CFArrayRef lines = CTFrameGetLines(frame);
         
@@ -702,7 +702,7 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
     
     CFArrayRef lines = CTFrameGetLines(frame);
     NSInteger numberOfLines = self.numberOfLines > 0 ? MIN(self.numberOfLines, CFArrayGetCount(lines)) : CFArrayGetCount(lines);
-    BOOL truncateLastLine = (self.lineBreakMode == TTTLineBreakByTruncatingHead || self.lineBreakMode == TTTLineBreakByTruncatingMiddle || self.lineBreakMode == TTTLineBreakByTruncatingTail);
+    BOOL truncateLastLine = (self.lineBreakMode == AXTTTLineBreakByTruncatingHead || self.lineBreakMode == AXTTTLineBreakByTruncatingMiddle || self.lineBreakMode == AXTTTLineBreakByTruncatingTail);
     
     CGPoint lineOrigins[numberOfLines];
     CTFrameGetLineOrigins(frame, CFRangeMake(0, numberOfLines), lineOrigins);
@@ -718,13 +718,13 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
         // Adjust pen offset for flush depending on text alignment
         CGFloat flushFactor = 0.0f;
         switch (self.textAlignment) {
-            case TTTTextAlignmentCenter:
+            case AXTTTTextAlignmentCenter:
                 flushFactor = 0.5f;
                 break;
-            case TTTTextAlignmentRight:
+            case AXTTTTextAlignmentRight:
                 flushFactor = 1.0f;
                 break;
-            case TTTTextAlignmentLeft:
+            case AXTTTTextAlignmentLeft:
             default:
                 break;
         }
@@ -737,22 +737,22 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
                 // Get correct truncationType and attribute position
                 CTLineTruncationType truncationType;
                 CFIndex truncationAttributePosition = lastLineRange.location;
-                TTTLineBreakMode lineBreakMode = self.lineBreakMode;
+                AXTTTLineBreakMode lineBreakMode = self.lineBreakMode;
                 
                 // Multiple lines, only use UILineBreakModeTailTruncation
                 if (numberOfLines != 1) {
-                    lineBreakMode = TTTLineBreakByTruncatingTail;
+                    lineBreakMode = AXTTTLineBreakByTruncatingTail;
                 }
                 
                 switch (lineBreakMode) {
-                    case TTTLineBreakByTruncatingHead:
+                    case AXTTTLineBreakByTruncatingHead:
                         truncationType = kCTLineTruncationStart;
                         break;
-                    case TTTLineBreakByTruncatingMiddle:
+                    case AXTTTLineBreakByTruncatingMiddle:
                         truncationType = kCTLineTruncationMiddle;
                         truncationAttributePosition += (lastLineRange.length / 2);
                         break;
-                    case TTTLineBreakByTruncatingTail:
+                    case AXTTTLineBreakByTruncatingTail:
                     default:
                         truncationType = kCTLineTruncationEnd;
                         truncationAttributePosition += (lastLineRange.length - 1);
@@ -867,7 +867,7 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
     
     // Compensate for y-offset of text rect from vertical positioning
     CGFloat yOffset = 0.0f;
-    if (self.verticalAlignment != TTTAttributedLabelVerticalAlignmentTop) {
+    if (self.verticalAlignment != AXTTTAttributedLabelVerticalAlignmentTop) {
         yOffset -= [self textRectForBounds:self.bounds limitedToNumberOfLines:self.numberOfLines].origin.y;
     }
     
@@ -881,11 +881,11 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
         
         for (id glyphRun in (__bridge NSArray *)CTLineGetGlyphRuns((__bridge CTLineRef)line)) {
             NSDictionary *attributes = (__bridge NSDictionary *)CTRunGetAttributes((__bridge CTRunRef) glyphRun);
-            CGColorRef strokeColor = (__bridge CGColorRef)[attributes objectForKey:kTTTBackgroundStrokeColorAttributeName];
-            CGColorRef fillColor = (__bridge CGColorRef)[attributes objectForKey:kTTTBackgroundFillColorAttributeName];
-            UIEdgeInsets fillPadding = [[attributes objectForKey:kTTTBackgroundFillPaddingAttributeName] UIEdgeInsetsValue];
-            CGFloat cornerRadius = [[attributes objectForKey:kTTTBackgroundCornerRadiusAttributeName] floatValue];
-            CGFloat lineWidth = [[attributes objectForKey:kTTTBackgroundLineWidthAttributeName] floatValue];
+            CGColorRef strokeColor = (__bridge CGColorRef)[attributes objectForKey:kAXTTTBackgroundStrokeColorAttributeName];
+            CGColorRef fillColor = (__bridge CGColorRef)[attributes objectForKey:kAXTTTBackgroundFillColorAttributeName];
+            UIEdgeInsets fillPadding = [[attributes objectForKey:kAXTTTBackgroundFillPaddingAttributeName] UIEdgeInsetsValue];
+            CGFloat cornerRadius = [[attributes objectForKey:kAXTTTBackgroundCornerRadiusAttributeName] floatValue];
+            CGFloat lineWidth = [[attributes objectForKey:kAXTTTBackgroundLineWidthAttributeName] floatValue];
             
             if (strokeColor || fillColor) {
                 CGRect runBounds = CGRectZero;
@@ -955,7 +955,7 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
         
         for (id glyphRun in (__bridge NSArray *)CTLineGetGlyphRuns((__bridge CTLineRef)line)) {
             NSDictionary *attributes = (__bridge NSDictionary *)CTRunGetAttributes((__bridge CTRunRef) glyphRun);
-            BOOL strikeOut = [[attributes objectForKey:kTTTStrikeOutAttributeName] boolValue];
+            BOOL strikeOut = [[attributes objectForKey:kAXTTTStrikeOutAttributeName] boolValue];
             NSInteger superscriptStyle = [[attributes objectForKey:(id)kCTSuperscriptAttributeName] integerValue];
             
             if (strikeOut) {
@@ -1254,13 +1254,13 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
     if (textSize.height < textRect.size.height) {
         CGFloat yOffset = 0.0f;
         switch (self.verticalAlignment) {
-            case TTTAttributedLabelVerticalAlignmentCenter:
+            case AXTTTAttributedLabelVerticalAlignmentCenter:
                 yOffset = CGFloat_floor((bounds.size.height - textSize.height) / 2.0f);
                 break;
-            case TTTAttributedLabelVerticalAlignmentBottom:
+            case AXTTTAttributedLabelVerticalAlignmentBottom:
                 yOffset = bounds.size.height - textSize.height;
                 break;
-            case TTTAttributedLabelVerticalAlignmentTop:
+            case AXTTTAttributedLabelVerticalAlignmentTop:
             default:
                 break;
         }
@@ -1284,11 +1284,11 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
     // Adjust the font size to fit width, if necessarry
     if (self.adjustsFontSizeToFitWidth && self.numberOfLines > 0) {
         // Use infinite width to find the max width, which will be compared to availableWidth if needed.
-        CGSize maxSize = (self.numberOfLines > 1) ? CGSizeMake(TTTFLOAT_MAX, TTTFLOAT_MAX) : CGSizeZero;
+        CGSize maxSize = (self.numberOfLines > 1) ? CGSizeMake(AXTTTFLOAT_MAX, AXTTTFLOAT_MAX) : CGSizeZero;
         
         CGFloat textWidth = [self sizeThatFits:maxSize].width;
         CGFloat availableWidth = self.frame.size.width * self.numberOfLines;
-        if (self.numberOfLines > 1 && self.lineBreakMode == TTTLineBreakByWordWrapping) {
+        if (self.numberOfLines > 1 && self.lineBreakMode == AXTTTLineBreakByWordWrapping) {
             textWidth *= kTTTLineBreakWordWrapTextWidthScalingFactor;
         }
         

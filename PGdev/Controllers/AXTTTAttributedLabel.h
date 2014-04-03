@@ -26,41 +26,41 @@
 /**
  Vertical alignment for text in a label whose bounds are larger than its text bounds
  */
-typedef NS_ENUM(NSInteger, TTTAttributedLabelVerticalAlignment) {
-    TTTAttributedLabelVerticalAlignmentCenter   = 0,
-    TTTAttributedLabelVerticalAlignmentTop      = 1,
-    TTTAttributedLabelVerticalAlignmentBottom   = 2,
+typedef NS_ENUM(NSInteger, AXTTTAttributedLabelVerticalAlignment) {
+    AXTTTAttributedLabelVerticalAlignmentCenter   = 0,
+    AXTTTAttributedLabelVerticalAlignmentTop      = 1,
+    AXTTTAttributedLabelVerticalAlignmentBottom   = 2,
 };
 
 /**
  Determines whether the text to which this attribute applies has a strikeout drawn through itself.
  */
-extern NSString * const kTTTStrikeOutAttributeName;
+extern NSString * const kAXTTTStrikeOutAttributeName;
 
 /**
  The background fill color. Value must be a `CGColorRef`. Default value is `nil` (no fill).
  */
-extern NSString * const kTTTBackgroundFillColorAttributeName;
+extern NSString * const kAXTTTBackgroundFillColorAttributeName;
 
 /**
  The padding for the background fill. Value must be a `UIEdgeInsets`. Default value is `UIEdgeInsetsZero` (no padding).
  */
-extern NSString * const kTTTBackgroundFillPaddingAttributeName;
+extern NSString * const kAXTTTBackgroundFillPaddingAttributeName;
 
 /**
  The background stroke color. Value must be a `CGColorRef`. Default value is `nil` (no stroke).
  */
-extern NSString * const kTTTBackgroundStrokeColorAttributeName;
+extern NSString * const kAXTTTBackgroundStrokeColorAttributeName;
 
 /**
  The background stroke line width. Value must be an `NSNumber`. Default value is `1.0f`.
  */
-extern NSString * const kTTTBackgroundLineWidthAttributeName;
+extern NSString * const kAXTTTBackgroundLineWidthAttributeName;
 
 /**
  The background corner radius. Value must be an `NSNumber`. Default value is `5.0f`.
  */
-extern NSString * const kTTTBackgroundCornerRadiusAttributeName;
+extern NSString * const kAXTTTBackgroundCornerRadiusAttributeName;
 
 @protocol AXTTTAttributedLabelDelegate;
 
@@ -215,7 +215,7 @@ extern NSString * const kTTTBackgroundCornerRadiusAttributeName;
 /**
  The vertical text alignment for the label, for when the frame size is greater than the text rect size. The vertical alignment is `TTTAttributedLabelVerticalAlignmentCenter` by default.
  */
-@property (nonatomic, assign) TTTAttributedLabelVerticalAlignment verticalAlignment;
+@property (nonatomic, assign) AXTTTAttributedLabelVerticalAlignment verticalAlignment;
 
 ///--------------------------------------------
 /// @name Accessing Truncation Token Appearance
