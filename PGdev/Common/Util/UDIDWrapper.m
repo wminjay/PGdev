@@ -57,12 +57,12 @@ static NSString *pasteboardType = @"xxxxxAppsContent";
 - (NSMutableDictionary *)newSearchDictionary:(NSString *)identifier {
     NSMutableDictionary *searchDictionary = [[NSMutableDictionary alloc] init];
     
-    [searchDictionary setObject:(id)kSecClassGenericPassword forKey:(id)kSecClass];
+    searchDictionary[(id)kSecClass] = (id)kSecClassGenericPassword;
     
     NSData *encodedIdentifier = [identifier dataUsingEncoding:NSUTF8StringEncoding];
-    [searchDictionary setObject:encodedIdentifier forKey:(id)kSecAttrGeneric];
-    [searchDictionary setObject:encodedIdentifier forKey:(id)kSecAttrAccount];
-    [searchDictionary setObject:serviceName forKey:(id)kSecAttrService];
+    searchDictionary[(id)kSecAttrGeneric] = encodedIdentifier;
+    searchDictionary[(id)kSecAttrAccount] = encodedIdentifier;
+    searchDictionary[(id)kSecAttrService] = serviceName;
     
     return searchDictionary;
 }
@@ -71,10 +71,10 @@ static NSString *pasteboardType = @"xxxxxAppsContent";
     NSMutableDictionary *searchDictionary = [self newSearchDictionary:identifier];
     
     // Add search attributes
-    [searchDictionary setObject:(id)kSecMatchLimitOne forKey:(id)kSecMatchLimit];
+    searchDictionary[(id)kSecMatchLimit] = (id)kSecMatchLimitOne;
     
     // Add search return types
-    [searchDictionary setObject:(id)kCFBooleanTrue forKey:(id)kSecReturnData];
+    searchDictionary[(id)kSecReturnData] = (id)kCFBooleanTrue;
     
     NSData *result = nil;
     SecItemCopyMatching((CFDictionaryRef)searchDictionary, (CFTypeRef *)&result);
@@ -86,7 +86,7 @@ static NSString *pasteboardType = @"xxxxxAppsContent";
     NSMutableDictionary *dictionary = [self newSearchDictionary:identifier];
     
     NSData *passwordData = [value dataUsingEncoding:NSUTF8StringEncoding];
-    [dictionary setObject:passwordData forKey:(id)kSecValueData];
+    dictionary[(id)kSecValueData] = passwordData;
     
     OSStatus status = SecItemAdd((CFDictionaryRef)dictionary, NULL);
     [dictionary release];
@@ -102,7 +102,7 @@ static NSString *pasteboardType = @"xxxxxAppsContent";
     NSMutableDictionary *searchDictionary = [self newSearchDictionary:identifier];
     NSMutableDictionary *updateDictionary = [[NSMutableDictionary alloc] init];
     NSData *passwordData = [value dataUsingEncoding:NSUTF8StringEncoding];
-    [updateDictionary setObject:passwordData forKey:(id)kSecValueData];
+    updateDictionary[(id)kSecValueData] = passwordData;
     
     OSStatus status = SecItemUpdate((CFDictionaryRef)searchDictionary,
                                     (CFDictionaryRef)updateDictionary);
@@ -125,7 +125,7 @@ static NSString *pasteboardType = @"xxxxxAppsContent";
 
 - (void)createPasteBoradValue:(NSString *)value forIdentifier:(NSString *)identifier {
     UIPasteboard *pb = [UIPasteboard pasteboardWithName:serviceName create:YES];
-    NSDictionary *dict = [NSDictionary dictionaryWithObject:value forKey:identifier];
+    NSDictionary *dict = @{identifier: value};
     NSData *dictData = [NSKeyedArchiver archivedDataWithRootObject:dict];
     [pb setData:dictData forPasteboardType:pasteboardType];
 }
@@ -134,7 +134,7 @@ static NSString *pasteboardType = @"xxxxxAppsContent";
     
     UIPasteboard *pb = [UIPasteboard pasteboardWithName:serviceName create:YES];
     NSDictionary *dict = [NSKeyedUnarchiver unarchiveObjectWithData:[pb dataForPasteboardType:pasteboardType]];
-    return [dict objectForKey:identifier];
+    return dict[identifier];
 }
 
 @end

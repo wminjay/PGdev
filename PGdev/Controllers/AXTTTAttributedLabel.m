@@ -1062,6 +1062,7 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
 
 - (NSAttributedString *)parseMarkup:(NSAttributedString *)markup
 {
+    self.bAttributedText = [markup copy];
     NSString *text = [markup string];
     NSUInteger length = [text length];
     if ( length<=0 ) {
@@ -1083,10 +1084,9 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
     for (int i = [chunks count] - 1; i >= 0; --i) {
         NSTextCheckingResult *chunk = [chunks objectAtIndex:i];
         NSString *result = [text substringWithRange:[chunk range]];
-//        DLog(@"result:%@", result);
+
         if ([result hasPrefix:@"["] && [result hasSuffix:@"]"] && ([result length] > 2)) {
             NSString *name = [result substringWithRange:NSMakeRange(1, [result length]-2)];
-//            DLog(@"name:%@", name);
             NSDictionary *brick = [self imageBrickForName:name];
             if (brick) {
                 CTRunDelegateCallbacks callbacks;
@@ -1154,6 +1154,8 @@ static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstra
                 if ([results count] > 0) {
                     dispatch_sync(dispatch_get_main_queue(), ^{
                         if ([[strongSelf.attributedText string] isEqualToString:[(NSAttributedString *)text string]]) {
+                            [strongSelf addLinksWithTextCheckingResults:results attributes:strongSelf.linkAttributes];
+                        } else if (strongSelf.bAttributedText && [[strongSelf.bAttributedText string] isEqualToString:[(NSAttributedString *)text string]]) {
                             [strongSelf addLinksWithTextCheckingResults:results attributes:strongSelf.linkAttributes];
                         }
                     });

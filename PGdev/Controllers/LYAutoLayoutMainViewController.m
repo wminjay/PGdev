@@ -104,13 +104,13 @@
     
     
     NSMutableDictionary* recordSetting = [[NSMutableDictionary alloc] init];
-    [recordSetting setValue :[NSNumber numberWithInt:kAudioFormatAppleIMA4] forKey:AVFormatIDKey];
-    [recordSetting setValue:[NSNumber numberWithFloat:44100.0] forKey:AVSampleRateKey];
-    [recordSetting setValue:[NSNumber numberWithInt: 2] forKey:AVNumberOfChannelsKey];
+    [recordSetting setValue :@(kAudioFormatAppleIMA4) forKey:AVFormatIDKey];
+    [recordSetting setValue:@44100.0f forKey:AVSampleRateKey];
+    [recordSetting setValue:@2 forKey:AVNumberOfChannelsKey];
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
                                                          NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentsDirectory = paths[0];
     NSURL *recordedTmpFile = [NSURL fileURLWithPath:[documentsDirectory stringByAppendingPathComponent: [NSString stringWithFormat: @"test%d.%@",01, @"caf"]]];
 //    NSString *str = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"voice.amr"];
 //    NSURL *recordedTmpFile = [[NSURL alloc] initFileURLWithPath:str];
@@ -336,9 +336,9 @@
 
 - (void)keyboardWillShowHide:(NSNotification *)notification
 {
-    CGRect keyboardRect = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-	UIViewAnimationCurve curve = [[notification.userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
-	double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    CGRect keyboardRect = [(notification.userInfo)[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+	UIViewAnimationCurve curve = [(notification.userInfo)[UIKeyboardAnimationCurveUserInfoKey] integerValue];
+	double duration = [(notification.userInfo)[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
     [UIView animateWithDuration:duration
                           delay:0.0

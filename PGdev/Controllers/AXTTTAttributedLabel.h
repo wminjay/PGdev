@@ -283,6 +283,7 @@ afterInheritingLabelAttributesAndConfiguringWithBlock:(NSMutableAttributedString
  A copy of the label's current attributedText. This returns `nil` if an attributed string has never been set on the label.
  */
 @property (readwrite, nonatomic, copy) NSAttributedString *attributedText;
+@property (readwrite, nonatomic, copy) NSAttributedString *bAttributedText;
 
 ///-------------------
 /// @name Adding Links

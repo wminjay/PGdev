@@ -74,7 +74,10 @@
 //             range:linkRange];
 //    
 //    [self.view addSubview:label];
-
+    dispatch_queue_t queue = dispatch_queue_create("123", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(queue, ^{
+        dispatch_release(queue);
+    });
     
     
 }

@@ -17,13 +17,13 @@
 	    return nil;
 	}
 	
-	return [self objectAtIndex:0];
+	return self[0];
 }
 
 
 - (id)randomObject
 {
-	return [self objectAtIndex:arc4random_uniform([self count])];
+	return self[arc4random_uniform([self count])];
 }
 
 - (NSArray *)shuffledArray
