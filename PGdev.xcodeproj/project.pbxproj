@@ -35,6 +35,7 @@
 		A834FEF1188FA95E00D4DFAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A834FEEF188FA95E00D4DFAE /* InfoPlist.strings */; };
 		A834FEF3188FA95E00D4DFAE /* PGdevTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A834FEF2188FA95E00D4DFAE /* PGdevTests.m */; };
 		A846600F18C258760001D2F9 /* LYTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A846600E18C258760001D2F9 /* LYTestCell.m */; };
+		A86BF14A18F3CF7E00414F09 /* LYRCDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A86BF14918F3CF7E00414F09 /* LYRCDemoViewController.m */; };
 		A8990E77188FC00E000AE25D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8990E76188FC00E000AE25D /* Main.storyboard */; };
 		A8990E7B188FC0BE000AE25D /* LYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8990E7A188FC0BE000AE25D /* LYMainViewController.m */; };
 		A8990E7E188FC316000AE25D /* LYTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8990E7D188FC316000AE25D /* LYTestViewController.m */; };
@@ -111,6 +112,8 @@
 		A846600D18C258760001D2F9 /* LYTestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTestCell.h; sourceTree = "<group>"; };
 		A846600E18C258760001D2F9 /* LYTestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTestCell.m; sourceTree = "<group>"; };
 		A8490CD518D180B100042671 /* voice.amr */ = {isa = PBXFileReference; lastKnownFileType = file; path = voice.amr; sourceTree = "<group>"; };
+		A86BF14818F3CF7E00414F09 /* LYRCDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYRCDemoViewController.h; sourceTree = "<group>"; };
+		A86BF14918F3CF7E00414F09 /* LYRCDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYRCDemoViewController.m; sourceTree = "<group>"; };
 		A8990E76188FC00E000AE25D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A8990E79188FC0BE000AE25D /* LYMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYMainViewController.h; sourceTree = "<group>"; };
 		A8990E7A188FC0BE000AE25D /* LYMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYMainViewController.m; sourceTree = "<group>"; };
@@ -293,6 +296,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A86BF14718F3CF6C00414F09 /* ReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				A86BF14818F3CF7E00414F09 /* LYRCDemoViewController.h */,
+				A86BF14918F3CF7E00414F09 /* LYRCDemoViewController.m */,
+			);
+			path = ReactiveCocoa;
+			sourceTree = "<group>";
+		};
 		A8990E75188FBC85000AE25D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +318,7 @@
 		A8990E78188FC09B000AE25D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A86BF14718F3CF6C00414F09 /* ReactiveCocoa */,
 				A81632E518EA941F0061F8BE /* TTTDemo */,
 				A8D389551890AE3900767F50 /* AutoLayoutDemo */,
 				A8990E79188FC0BE000AE25D /* LYMainViewController.h */,
@@ -554,6 +567,7 @@
 				A8A93D9C189D363D007689ED /* NSNumber+AIFExtraMethod.m in Sources */,
 				A834FEDA188FA95E00D4DFAE /* LYAppDelegate.m in Sources */,
 				A8A93DA2189D509A007689ED /* NSDictionary+AIFExtraMethod.m in Sources */,
+				A86BF14A18F3CF7E00414F09 /* LYRCDemoViewController.m in Sources */,
 				A808ECCD18BAE32D009382DE /* UIColor+JSMessagesView.m in Sources */,
 				A81632EB18EA9F780061F8BE /* LYTTTDemoTableViewCell.m in Sources */,
 				A81632E818EA943A0061F8BE /* LYTTTDemoTableViewController.m in Sources */,
