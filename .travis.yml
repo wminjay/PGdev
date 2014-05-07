@@ -1,11 +1,12 @@
 language: objective-c
+xcode_workspace: PGdev.xcworkspace
+xcode_scheme: PGdev
+xcode_sdk: iphonesimulator7.0
 before_script:
-    - export LANG=en_US.UTF-8
-
+  - brew update
+  - brew upgrade xctool
 before_install:
-    - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
-    - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-    - pod install
-script:xcodebuild -workspace PGdev.xcworkspace -scheme PGdev -sdk iphonesimulator -configuration Release clean test 
+  - export LANG=en_US.UTF-8
+  - gem install cocoapods -v '0.32.1'
 
 
