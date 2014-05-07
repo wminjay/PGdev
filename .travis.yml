@@ -7,6 +7,6 @@ before_install:
     - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
     - ls -al
     - pod install && cd $TRAVIS_BUILD_DIR
-script: rake test
+script: xcodebuild -workspace PGdev.xcworkspace -scheme PGdev -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES 
 
 
