@@ -13,6 +13,7 @@
 #import "LYTestCell.h"
 #import "LYTTTDemoTableViewController.h"
 #import "LYRCDemoViewController.h"
+#import <CoreText/CoreText.h>
 
 @interface LYMainViewController ()
 
@@ -25,13 +26,17 @@
 #pragma mark - Test Function
 - (void)testUILable
 {
-//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 150, 200, 100)];
-//    label.backgroundColor = [UIColor yellowColor];
-//    label.numberOfLines = 0;
-//    NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:@"baidu.com 1391596894 babab 百度 aabab sdss sdfdf"];
-//    NSAttributedString *linkStr = [[NSAttributedString alloc] initWithString:@"Baidu" attributes:@{NSLinkAttributeName: @"http://baidu.com"}];
-//    label.attributedText = linkStr;
-//    [self.view addSubview:label];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 150, 200, 100)];
+    label.backgroundColor = [UIColor yellowColor];
+    label.numberOfLines = 0;
+    NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:@"baidu.com 😌世纪 1391596894 babab 百度 aabab sdss sdfdf"];
+    
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef)attrStr);
+
+    
+    NSAttributedString *linkStr = [[NSAttributedString alloc] initWithString:@"Baidu 😌世纪" attributes:@{NSLinkAttributeName: @"http://baidu.com"}];
+    label.attributedText = attrStr;
+    [self.view addSubview:label];
     
     
     
@@ -93,7 +98,7 @@
     self.dataList = [NSMutableArray array];
     [self.dataList addObject:@"a"];
     
-//    [self testUILable];
+    [self testUILable];
     
     
     
