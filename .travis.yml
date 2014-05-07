@@ -5,8 +5,7 @@ before_script:
 before_install:
     - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
     - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-    - ls -al
-    - pod install && cd $TRAVIS_BUILD_DIR
-script: xcodebuild -workspace PGdev.xcworkspace -scheme PGdev -sdk iphonesimulator ONLY_ACTIVE_ARCH=YES 
+    - pod install
+script:xcodebuild -workspace PGdev.xcworkspace -scheme PGdev -sdk iphonesimulator -configuration Release clean test 
 
 
